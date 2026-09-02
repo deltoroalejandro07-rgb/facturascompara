@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FacturasCompara — Detecta sobrecostes en las facturas de tus proveedores</title>
+<meta name="description" content="Sube las facturas de un proveedor y su contrato: la IA compara precios, cantidades y cálculos mes a mes y te muestra cada sobrecoste con su importe exacto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css?v=20260902">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand"><span class="mark">FC</span>FacturasCompara</a>
+    <nav class="links" id="navLinks">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#ejemplo">Ejemplo</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener" class="mobile-only-link">Iniciar sesión</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Iniciar sesión</a>
+      <a class="btn btn-primary" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Probar gratis</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Auditoría de facturas de proveedores</p>
+        <h1>Cada mes suben una tarifa sin avisar. Nosotros lo encontramos por ti.</h1>
+        <p class="lead">Sube varias facturas del mismo proveedor —y su contrato, si lo tienes— y la IA compara conceptos, precios y cálculos entre ellas. Recibes cada anomalía con el importe exacto de más y el nivel de confianza.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Probar gratis — 3 comparativas</a>
+          <a class="btn btn-lg" href="#ejemplo">Ver un hallazgo real</a>
+        </div>
+        <p class="hero-note">Sin tarjeta. Los planes de pago son una simulación de demostración: el registro, el inicio de sesión y el contador de créditos son reales.</p>
+        <div class="sector-strip">
+          <span class="sector-chip">Transporte y logística</span>
+          <span class="sector-chip">Suministros</span>
+          <span class="sector-chip">Alquiler de maquinaria</span>
+          <span class="sector-chip">Telecomunicaciones B2B</span>
+          <span class="sector-chip">Mantenimiento</span>
+        </div>
+      </div>
+      <div class="finding-card" aria-hidden="false">
+        <div class="fc-head">
+          <span class="prov">Transportes Ibérica Sur S.L. — marzo 2026</span>
+          <span class="badge">Confianza alta</span>
+        </div>
+        <div class="fc-body">
+          <div class="fc-row"><span class="label">Concepto</span><span class="val">Detención de vehículo</span></div>
+          <div class="fc-row"><span class="label">Antes (contrato y facturas previas)</span><span class="val">45,00 €/día</span></div>
+          <div class="fc-row"><span class="label">Ahora (factura de marzo)</span><span class="val">60,00 €/día</span></div>
+          <div class="fc-row"><span class="label">Días facturados</span><span class="val">8</span></div>
+          <div class="fc-row diff"><span class="label">Diferencia</span><span class="val">+15,00 €/día</span></div>
+        </div>
+        <div class="fc-foot"><span>De más este mes</span><span>120,00 €</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Cómo funciona</p>
+        <h2>Tres pasos, un solo resultado: dónde te están cobrando de más.</h2>
+      </div>
+      <div class="grid-3">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>Sube las facturas</h3>
+          <p>Varias facturas en PDF del mismo proveedor, de distintos meses. Si tienes el contrato o la tarifa pactada, súbelo también: es opcional pero afina la confianza de cada hallazgo.</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>La IA extrae y compara</h3>
+          <p>Lee cada factura, identifica los conceptos con su precio y cantidad, y los compara entre facturas y contra el contrato: subidas sin explicar, cargos nuevos y cálculos que no cuadran.</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>Revisas y decides</h3>
+          <p>Cada hallazgo se marca como resuelto, se ignora o se pasa a reclamar al proveedor. Cuando termines, descargas el informe final en PDF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ejemplo" style="background:var(--paper-raised);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Ejemplo visual</p>
+        <h2>Así se ve un hallazgo, factura contra factura</h2>
+        <p class="lead" style="margin:0 auto">Un mismo concepto, comparado mes a mes. El sobrecoste queda señalado con su importe exacto, no como una sospecha genérica.</p>
+      </div>
+      <div class="grid-3" style="grid-template-columns:1fr 1fr 1fr;align-items:stretch">
+        <div class="finding-card">
+          <div class="fc-head"><span class="prov">Factura de enero</span><span class="badge" style="background:var(--ok-tint);color:var(--ok)">Histórico</span></div>
+          <div class="fc-body">
+            <div class="fc-row"><span class="label">Detención de vehículo</span><span class="val">45,00 €/día</span></div>
+            <div class="fc-row"><span class="label">Días</span><span class="val">6</span></div>
+            <div class="fc-row"><span class="label">Subtotal</span><span class="val">270,00 €</span></div>
+          </div>
+        </div>
+        <div class="finding-card">
+          <div class="fc-head"><span class="prov">Factura de febrero</span><span class="badge" style="background:var(--ok-tint);color:var(--ok)">Histórico</span></div>
+          <div class="fc-body">
+            <div class="fc-row"><span class="label">Detención de vehículo</span><span class="val">45,00 €/día</span></div>
+            <div class="fc-row"><span class="label">Días</span><span class="val">5</span></div>
+            <div class="fc-row"><span class="label">Subtotal</span><span class="val">225,00 €</span></div>
+          </div>
+        </div>
+        <div class="finding-card">
+          <div class="fc-head" style="background:var(--alert-tint)"><span class="prov">Factura de marzo</span><span class="badge">Anomalía</span></div>
+          <div class="fc-body">
+            <div class="fc-row diff"><span class="label">Detención de vehículo</span><span class="val">60,00 €/día</span></div>
+            <div class="fc-row"><span class="label">Días</span><span class="val">8</span></div>
+            <div class="fc-row diff"><span class="label">Subtotal</span><span class="val">480,00 €</span></div>
+          </div>
+          <div class="fc-foot"><span>Sobrecoste vs. tarifa histórica</span><span>+120,00 €</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectores">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Para cualquier proveedor recurrente</p>
+        <h2>El mecanismo de comparación es el mismo, cambie lo que cambie la factura</h2>
+        <p class="lead">Pensado para departamentos de administración y compras que gestionan varios proveedores recurrentes y no tienen tiempo de comparar facturas a mano cada mes.</p>
+      </div>
+      <div class="sector-grid">
+        <div class="sector-card">Transporte y logística — detenciones, kilometraje, recargos de combustible</div>
+        <div class="sector-card">Suministros (luz, agua, gas) — términos de potencia, peajes, tasas</div>
+        <div class="sector-card">Alquiler de maquinaria — tarifas diarias, seguros, transporte de equipos</div>
+        <div class="sector-card">Telecomunicaciones B2B — líneas, cuotas de mantenimiento, excesos</div>
+        <div class="sector-card">Mantenimiento y facility — horas de intervención, materiales, desplazamientos</div>
+        <div class="sector-card">Cualquier proveedor con factura recurrente y conceptos repetidos mes a mes</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" style="background:var(--paper-raised);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Precios</p>
+        <h2>Un crédito es una comparativa completa entre las facturas de un proveedor</h2>
+      </div>
+      <div class="mock-banner"><span class="dot"></span>Los planes de pago son una simulación de demostración — no se realiza ningún cargo real al mejorar de plan.</div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Gratis</h3>
+          <div class="price">0 €</div>
+          <ul>
+            <li>3 comparativas para probarlo</li>
+            <li>Subida de precio, cargos nuevos y errores de cálculo</li>
+            <li>Sin comparación con contrato de referencia</li>
+            <li>Informe en PDF descargable</li>
+          </ul>
+          <a class="btn" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Crear cuenta gratis</a>
+        </div>
+        <div class="plan featured">
+          <span class="flag">Más elegido</span>
+          <h3>Pro</h3>
+          <div class="price">29 €<span> / mes</span></div>
+          <ul>
+            <li>50 comparativas al mes</li>
+            <li>Comparación con contrato o tarifa de referencia</li>
+            <li>Confianza alta / media por hallazgo</li>
+            <li>Historial de comparativas y estados</li>
+          </ul>
+          <a class="btn btn-primary" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Empezar con Pro</a>
+        </div>
+        <div class="plan">
+          <h3>Negocio</h3>
+          <div class="price">79 €<span> / mes</span></div>
+          <ul>
+            <li>200 comparativas al mes</li>
+            <li>Para varios proveedores y equipos de compras</li>
+            <li>Comparación con contrato de referencia</li>
+            <li>Informe en PDF descargable</li>
+          </ul>
+          <a class="btn" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Empezar con Negocio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap" style="max-width:820px">
+      <div class="section-head">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Antes de empezar</h2>
+      </div>
+      <details class="faq-item" open>
+        <summary>¿Qué es exactamente un "crédito"?</summary>
+        <p>Un crédito equivale a una comparativa completa: analizar el conjunto de facturas que subes de un mismo proveedor (más el contrato, si lo aportas) y generar el informe de hallazgos. No se cobra por factura individual ni por hallazgo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesito subir el contrato con el proveedor?</summary>
+        <p>No, es opcional. Sin contrato, FacturasCompara compara las facturas entre sí y marca las subidas o cargos nuevos con confianza media. Si subes el contrato, cualquier cargo que lo incumpla se marca con confianza alta.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Sirve para cualquier proveedor o solo para transporte?</summary>
+        <p>Sirve para cualquier proveedor con facturación recurrente: transporte y logística, suministros, alquiler de maquinaria, telecomunicaciones B2B, mantenimiento y, en general, cualquier sector donde se repitan conceptos de una factura a otra.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Los pagos son reales?</summary>
+        <p>No. Esta es una demostración funcional: el registro, el inicio de sesión y el contador de créditos son reales y persisten, pero el cobro de los planes Pro y Negocio es una simulación — no se procesa ningún pago ni se guarda ningún dato de tarjeta.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa cuando me quedo sin créditos?</summary>
+        <p>La aplicación te avisa antes de dejarte continuar y te ofrece simular la mejora de plan. Con el plan gratuito puedes probar el flujo completo con 3 comparativas antes de decidir.</p>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>¿Cuántas facturas de tus proveedores no has vuelto a mirar desde que las pagaste?</h2>
+          <p>Sube las tres últimas de cualquiera de ellos y compruébalo en unos minutos.</p>
+        </div>
+        <a class="btn btn-primary btn-lg" href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Probar gratis ahora</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col" style="max-width:280px">
+        <a href="index.html" class="brand" style="margin-bottom:10px;display:inline-flex"><span class="mark">FC</span>FacturasCompara</a>
+        <p style="color:var(--ink-faint);font-size:13.5px">Detección automática de sobrecostes y anomalías en facturas de proveedores, para departamentos de administración y compras.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Producto</h4>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+        <a href="https://claude.ai/code/artifact/ef70d4f4-5ead-48cc-8662-a15bd2969505" target="_blank" rel="noopener">Acceder a la aplicación</a>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <a href="aviso-legal.html">Aviso legal</a>
+        <a href="privacidad.html">Privacidad</a>
+        <a href="terminos.html">Términos de servicio</a>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 FacturasCompara. Producto en fase de demostración.</span>
+      <span>Los pagos mostrados en este sitio son simulados.</span>
+    </div>
+  </div>
+</footer>
+
+<script defer>
+(function(){
+  window.__BRAND__ = 'FacturasCompara';
+  function safe(fn){ try{ fn(); }catch(e){ console.error(e); } }
+  safe(function(){
+    var toggle = document.getElementById('menuToggle');
+    var links = document.getElementById('navLinks');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>
